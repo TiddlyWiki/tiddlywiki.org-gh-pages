@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.2.4" />
+<meta name="tiddlywiki-version" content="5.2.5" />
 <meta name="format-detection" content="telephone=no">
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
 <title>tiddlywiki.org — community matters for TiddlyWiki</title>
@@ -543,9 +543,7 @@ html button {
 	color: ;
 	fill: ;
 	background: ;
-	border: 1px solid ;
-	border-radius: 3px;
-	padding: 2px 5px;
+	border-color: ;
 }button:disabled svg {
 	fill: #a193a1;
 }/*
@@ -639,21 +637,13 @@ html button {
 }dl dt {
 	font-weight: bold;
 	margin-top: 6px;
-}/*
-** Definition for text input elements so they look consistent for all browsers
-*/textarea, input, select {
-	border: 2px solid #cccccc;
-	background-color: #d5eee8;
-}/* Input elements accessibility -- overwrite the reset */
-:focus-visible {
-	outline: 2px solid #4e7baa;
-	outline-offset: -2px;    /* same as in reset.css [type='search'] but for more elements */
 }textarea,
 input[type=text],
 input[type=search],
 input[type=""],
 input:not([type]) {
 	color: #83657b;
+	background: #e3fdf6;
 }input[type="checkbox"] {
 	vertical-align: middle;
 }input[type="search"]::-webkit-search-decoration,
@@ -711,7 +701,7 @@ Table defaults
 	border-collapse: collapse;
 	border-spacing: 0;
 }table th, table td {
-	padding: 4px 6px 4px 6px;
+	padding: 0 7px 0 7px;
 	border-top: 1px solid #dddddd;
 	border-left: 1px solid #dddddd;
 }table thead tr td, table th {
