@@ -564,7 +564,7 @@ html button {
 	display: block;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	word-break: break-word;
+	word-break: normal;
 	word-wrap: break-word;
 	white-space: pre-wrap;
 	background-color: #d5eee8;
@@ -1013,9 +1013,6 @@ a.tc-tiddlylink:hover {
 }.tc-sidebar-scrollable .tc-tag-label {
 	text-shadow: none;
 }.tc-untagged-separator {
-	width: 10em;
-	left: 0;
-	margin-left: 0;
 	border: 0;
 	height: 1px;
 	background: #d8d8d8;
@@ -1194,19 +1191,6 @@ a.tc-tiddlylink:hover {
 		border-radius: 2px;
 	}.tc-tiddler-info {
 		margin: 0 -42px 0 -42px;
-	}
-}/* prevent overflow for table content for small screens*/
-@media (max-width: 960px) {
-	.tc-tiddler-frame tr {
-		word-wrap: anywhere;
-	}.tc-tiddler-frame table blockquote {
-		margin-left: 12.5px;
-		margin-right: 12.5px; 
-	}.tc-tiddler-frame table dd {
-		margin-left: 12.5px;
-	}.tc-tiddler-frame table ol,
-	.tc-tiddler-frame table ul {
-		padding-left: 20px;
 	}
 }.tc-site-title,
 .tc-titlebar {
@@ -1389,7 +1373,7 @@ a.tc-tiddlylink:hover {
 		bottom: 0;
 		right: 0;
 		width: 450px;
-	}body.tc-body .tc-storyview-zoomin-tiddler {
+	}body.tc-body .tc-page-container.tc-page-view-zoomin .tc-tiddler-frame {
 		width: 100%;
 		width: calc(100% - 42px);
 	}}/*
@@ -1532,11 +1516,11 @@ a.tc-tiddlylink:hover {
 ** Storyview Classes
 */.tc-viewswitcher .tc-image-button {
 	margin-right: .3em;
-}.tc-storyview-zoomin-tiddler {
+}.tc-page-container.tc-page-view-zoomin .tc-tiddler-frame {
 	position: absolute;
 	display: block;
 	width: 100%;
-}@media (min-width: 960px) {.tc-storyview-zoomin-tiddler {
+}@media (min-width: 960px) {.tc-page-container.tc-page-view-zoomin .tc-tiddler-frame {
 		width: calc(100% - 84px);
 	}}/*
 ** Dropdowns
@@ -2212,6 +2196,9 @@ a.tc-tiddlylink:hover {
 	white-space: nowrap;
 }.tc-table-of-contents button {
 	color: #83657b;
+}button + .tc-toc-caption,
+button > .tc-toc-caption{
+	margin-left: .25em;
 }.tc-table-of-contents svg {
 	width: 0.7em;
 	height: 0.7em;
@@ -2286,7 +2273,15 @@ a.tc-tiddlylink:hover {
 	flex: 1 0 50%;
 }/*
 ** Dirty indicator
-*/html body.tc-dirty span.tc-dirty-indicator, html body.tc-dirty span.tc-dirty-indicator svg {
+*/html body svg.tc-image-save-button-dynamic .tc-image-save-button-dynamic-clean {
+	visibility: visible;
+}html body svg.tc-image-save-button-dynamic .tc-image-save-button-dynamic-dirty {
+	visibility: hidden;
+}html body.tc-dirty svg.tc-image-save-button-dynamic .tc-image-save-button-dynamic-clean {
+	visibility: hidden;
+}html body.tc-dirty svg.tc-image-save-button-dynamic .tc-image-save-button-dynamic-dirty {
+	visibility: visible;
+}html body.tc-dirty span.tc-dirty-indicator, html body.tc-dirty span.tc-dirty-indicator svg {
 	fill: #ff0000;
 	color: #ff0000;
 }/*
@@ -2456,7 +2451,7 @@ a.tc-tiddlylink:hover {
 	flex-grow: 2;
 }/*
 ** Other utility classes
-*/.tc-tiny-gap {
+*//* Horizontal gaps */.tc-tiny-gap {
 	margin-left: .25em;
 	margin-right: .25em;
 }.tc-tiny-gap-left {
@@ -2479,8 +2474,9 @@ a.tc-tiddlylink:hover {
 	margin-right: 1em;
 }.tc-word-break {
 	word-break: break-all;
-}
-nav.tc-menubar {
+}/* Vertical gaps */.tc-tiny-v-gap-bottom {
+	margin-bottom: 3px;
+}nav.tc-menubar {
 	position: fixed;
 	z-index: 850;
 	display: inline-block;
