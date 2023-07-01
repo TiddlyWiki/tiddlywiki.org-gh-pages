@@ -1340,6 +1340,8 @@ a.tc-tiddlylink:hover {
 }.tc-editor-toolbar button svg {
 	width: 1.6em;
 	height: 1.2em;
+}.tc-editor-toolbar .tc-drop-down button.tc-btn-mini {
+	padding: 2px 4px;
 }.tc-editor-toolbar button:hover {
 	background-color: #444444;
 	fill: #e3fdf6;
@@ -2433,9 +2435,43 @@ button > .tc-toc-caption{
 	color: ;
 	background: ;
 }/*
+** Translink macro
+*/.tc-translink {
+	background-color: #d5eee8;
+	border: 1px solid #d5eee8;
+	padding: 0 3px;
+	border-radius: 3px;
+}div.tc-translink > div {
+	margin: 1em;
+}div.tc-translink > div > a:first-child > h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}span.tc-translink > a:first-child {
+	font-weight: bold;
+}/*
+** Classes for displaying globals
+*/.tc-global-tiddler-body {
+	padding: 0.25em;
+	border: 1px solid #83657b;
+	background-color: #a193a1;
+	border-radius: 3px;
+}.tc-global-tiddler-body-heading {
+	margin: 0 0 0.25em 0;
+	font-weight: normal;
+}.tc-global-tiddler-body-type {
+	margin: 0 0 0.25em 0;
+	border-bottom: 1px solid #83657b;
+}.tc-global-tiddler-body-details {
+	background-color: #e3fdf6;
+}.tc-global-tiddler-body pre {
+	margin: 0;
+	border: 1px solid #83657b;
+}/*
 ** Utility classes for SVG icons
 */.tc-fill-background {
 	fill: #e3fdf6;
+}.tc-network-activity-background {
+	fill: #448844;
 }/*
 ** Flexbox utility classes
 */.tc-flex {
@@ -2476,7 +2512,8 @@ button > .tc-toc-caption{
 	word-break: break-all;
 }/* Vertical gaps */.tc-tiny-v-gap-bottom {
 	margin-bottom: 3px;
-}nav.tc-menubar {
+}
+nav.tc-menubar {
 	position: fixed;
 	z-index: 850;
 	display: inline-block;
