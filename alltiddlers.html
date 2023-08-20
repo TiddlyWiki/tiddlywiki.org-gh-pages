@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.3.0" />
+<meta name="tiddlywiki-version" content="5.3.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="format-detection" content="telephone=no">
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
@@ -84,6 +84,127 @@ Error message and password prompt
 </style>
 </div>
 <style type="text/css">
+nav.tc-menubar {
+	position: fixed;
+	z-index: 850;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	left: 0;
+}nav.tc-menubar ul.tc-menubar-list {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 42px;
+	background: #e3fdf6;
+	background: #5778d8;
+	
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+}@media (max-width: 959px) {html nav.tc-menubar ul.tc-menubar-list {
+		padding: 0 0 0 8px;
+	}}nav.tc-menubar li.tc-menubar-item {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}nav.tc-menubar .tc-menubar-narrow li.tc-menubar-item {
+	display: block;
+}nav.tc-menubar li.tc-menubar-item > a,
+nav.tc-menubar li.tc-menubar-item > button {
+	display: inline-block;
+/*	text-transform: uppercase; */
+	line-height: 1;
+	font-weight: 700;
+	color: #83657b;
+	color: #fff;
+	fill: #83657b;
+	fill: #fff;
+	text-decoration: none;
+	padding: 0.5em;
+	margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar li.tc-menubar-item > a.tc-selected,
+nav.tc-menubar li.tc-menubar-item > button.tc-selected {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+}nav.tc-menubar li.tc-menubar-item svg {
+	transition: none;
+	width: 1em;
+	height: 1em;
+	fill: #83657b;
+	fill: #fff;
+}nav.tc-menubar li.tc-menubar-item .tc-menubar-dropdown-arrow svg {
+	width: 0.5em;
+	height: 0.5em;
+}nav.tc-menubar li.tc-menubar-item > a.tc-selected svg,
+nav.tc-menubar li.tc-menubar-item > button.tc-selected svg {
+	fill: #e3fdf6;
+	fill: #5778d8;
+}nav.tc-menubar li.tc-menubar-item > a:hover,
+nav.tc-menubar li.tc-menubar-item > button:hover svg,
+nav.tc-menubar li.tc-menubar-item > button:hover {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar li.tc-menubar-item > a:active,
+nav.tc-menubar li.tc-menubar-item > button:active svg,
+nav.tc-menubar li.tc-menubar-item > button:active {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar .tc-drop-down,
+nav.tc-menubar .tc-block-dropdown {
+	max-width: 70vw;
+	max-height: 70vh;
+	overflow: auto;
+}nav.tc-menubar .tc-drop-down a {
+	text-decoration: none;
+}nav.tc-menubar .tc-drop-down .tc-table-of-contents button {
+	display: inline-block;
+	width: auto;
+}nav.tc-menubar .tc-drop-down ol {
+	margin: 0;
+}nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar a,
+nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
+	display: inline;
+	width: auto;
+}nav.tc-menubar .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
+	display: block;
+	width: 100%;
+}@media (max-width: 620px) {.tc-menubar-wide {
+		display: none;
+	}}@media (min-width: 621px) {nav.tc-menubar li.tc-menubar-item.tc-menubar-narrow,
+	.tc-menubar-narrow {
+		display: none;
+	}}@media (max-width: 959px) {.tc-sidebar-scrollable {
+		margin-top: 2em;
+	}}@media (max-width: 620px) {.tc-sidebar-scrollable {
+		margin-top: 2em;
+	}
+}
+@media print {nav.tc-menubar {
+		display: none;
+	}}
 .tc-sidebar-header {
 	text-shadow: 0 1px 0 #e3fdf6;
 }.tc-tiddler-info {
@@ -872,7 +993,7 @@ a.tc-tiddlylink:hover {
 	color: #83657b;
 	fill: #83657b;
 }button:disabled.tc-btn-invisible  {
-	cursor: default; 
+	cursor: default;
 	color: #a193a1;
 }.tc-btn-boxed {
 	font-size: 0.6em;
@@ -1218,6 +1339,9 @@ a.tc-tiddlylink:hover {
 }.tc-tiddler-title-icon {
 	vertical-align: middle;
 	margin-right: .1em;
+}.tc-tiddler-title-icon svg {
+	width: 0.9em;
+	height: 0.9em;
 }.tc-system-title-prefix {
 	color: #a193a1;
 }.tc-titlebar h2 {
@@ -2210,11 +2334,9 @@ a.tc-tiddlylink:hover {
 ** Table of contents
 */.tc-sidebar-lists .tc-table-of-contents {
 	white-space: nowrap;
-}.tc-table-of-contents button {
+}.tc-table-of-contents button,
+.tc-table-of-contents .toc-item-muted {
 	color: #83657b;
-}button + .tc-toc-caption,
-button > .tc-toc-caption{
-	margin-left: .25em;
 }.tc-table-of-contents svg {
 	width: 0.7em;
 	height: 0.7em;
@@ -2527,127 +2649,6 @@ button > .tc-toc-caption{
 }/* Vertical gaps */.tc-tiny-v-gap-bottom {
 	margin-bottom: 3px;
 }
-nav.tc-menubar {
-	position: fixed;
-	z-index: 850;
-	display: inline-block;
-	top: 0;
-	right: 0;
-	left: 0;
-}nav.tc-menubar ul.tc-menubar-list {
-	position: relative;
-	list-style-type: none;
-	margin: 0;
-	padding: 0 0 0 42px;
-	background: #e3fdf6;
-	background: #5778d8;
-	
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-
-}@media (max-width: 959px) {html nav.tc-menubar ul.tc-menubar-list {
-		padding: 0 0 0 8px;
-	}}nav.tc-menubar li.tc-menubar-item {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}nav.tc-menubar .tc-menubar-narrow li.tc-menubar-item {
-	display: block;
-}nav.tc-menubar li.tc-menubar-item > a,
-nav.tc-menubar li.tc-menubar-item > button {
-	display: inline-block;
-/*	text-transform: uppercase; */
-	line-height: 1;
-	font-weight: 700;
-	color: #83657b;
-	color: #fff;
-	fill: #83657b;
-	fill: #fff;
-	text-decoration: none;
-	padding: 0.5em;
-	margin: 0;
-	background: none;
-	border: none;
-	cursor: pointer;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar li.tc-menubar-item > a.tc-selected,
-nav.tc-menubar li.tc-menubar-item > button.tc-selected {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-}nav.tc-menubar li.tc-menubar-item svg {
-	transition: none;
-	width: 1em;
-	height: 1em;
-	fill: #83657b;
-	fill: #fff;
-}nav.tc-menubar li.tc-menubar-item .tc-menubar-dropdown-arrow svg {
-	width: 0.5em;
-	height: 0.5em;
-}nav.tc-menubar li.tc-menubar-item > a.tc-selected svg,
-nav.tc-menubar li.tc-menubar-item > button.tc-selected svg {
-	fill: #e3fdf6;
-	fill: #5778d8;
-}nav.tc-menubar li.tc-menubar-item > a:hover,
-nav.tc-menubar li.tc-menubar-item > button:hover svg,
-nav.tc-menubar li.tc-menubar-item > button:hover {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar li.tc-menubar-item > a:active,
-nav.tc-menubar li.tc-menubar-item > button:active svg,
-nav.tc-menubar li.tc-menubar-item > button:active {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar .tc-drop-down,
-nav.tc-menubar .tc-block-dropdown {
-	max-width: 70vw;
-	max-height: 70vh;
-	overflow: auto;
-}nav.tc-menubar .tc-drop-down a {
-	text-decoration: none;
-}nav.tc-menubar .tc-drop-down .tc-table-of-contents button {
-	display: inline-block;
-	width: auto;
-}nav.tc-menubar .tc-drop-down ol {
-	margin: 0;
-}nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar a,
-nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
-	display: inline;
-	width: auto;
-}nav.tc-menubar .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
-	display: block;
-	width: 100%;
-}@media (max-width: 620px) {.tc-menubar-wide {
-		display: none;
-	}}@media (min-width: 621px) {nav.tc-menubar li.tc-menubar-item.tc-menubar-narrow,
-	.tc-menubar-narrow {
-		display: none;
-	}}@media (max-width: 959px) {.tc-sidebar-scrollable {
-		margin-top: 2em;
-	}}@media (max-width: 620px) {.tc-sidebar-scrollable {
-		margin-top: 2em;
-	}
-}
-@media print {nav.tc-menubar {
-		display: none;
-	}}
 .tc-sites-icon {
 	width: 1em;
 	height: 1em;
@@ -2711,7 +2712,7 @@ color:#83657b;">TiddlyWikiSitesMenu</span><span class="tc-drop-down tc-reveal" h
 </a><a name="Table of Contents">
 <div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-%24%3A%2Ftags%2FSideBar" data-tags="$:/tags/SideBar" data-tiddler-title="Table of Contents" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Table of Contents</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href="#"></a> 19th April 2022 at 8:15am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="$:/tags/SideBar"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
 fill:#83657b;
-color:#83657b;">$:/tags/SideBar</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#HelloThere"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">HelloThere</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Fundraising"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">Fundraising</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Code%20of%20Conduct"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">Code of Conduct</span></a><span class=" tc-reveal" hidden="true"></span></li></ol></p></div></div>
+color:#83657b;">$:/tags/SideBar</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#HelloThere"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">HelloThere</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Fundraising"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Fundraising</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Code%20of%20Conduct"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Code of Conduct</span></a><span class=" tc-reveal" hidden="true"></span></li></ol></p></div></div>
 </div>
 </a><a name="TiddlyWiki">
 <div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists " data-tags="" data-tiddler-title="TiddlyWiki" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">TiddlyWiki</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href="#"></a> 18th March 2022 at 5:02pm</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"></div></div><div class="tc-tiddler-body tc-reveal"><p>TiddlyWiki is a rich, interactive tool for manipulating complex data with structure that doesn't easily fit into conventional tools like spreadsheets or wordprocessors.</p><p>See <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> for more details</p></div>

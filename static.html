@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.3.0" />
+<meta name="tiddlywiki-version" content="5.3.1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -87,6 +87,127 @@ Error message and password prompt
 </style>
 </div>
 <style type="text/css">
+nav.tc-menubar {
+	position: fixed;
+	z-index: 850;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	left: 0;
+}nav.tc-menubar ul.tc-menubar-list {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 42px;
+	background: #e3fdf6;
+	background: #5778d8;
+	
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+}@media (max-width: 959px) {html nav.tc-menubar ul.tc-menubar-list {
+		padding: 0 0 0 8px;
+	}}nav.tc-menubar li.tc-menubar-item {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}nav.tc-menubar .tc-menubar-narrow li.tc-menubar-item {
+	display: block;
+}nav.tc-menubar li.tc-menubar-item > a,
+nav.tc-menubar li.tc-menubar-item > button {
+	display: inline-block;
+/*	text-transform: uppercase; */
+	line-height: 1;
+	font-weight: 700;
+	color: #83657b;
+	color: #fff;
+	fill: #83657b;
+	fill: #fff;
+	text-decoration: none;
+	padding: 0.5em;
+	margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar li.tc-menubar-item > a.tc-selected,
+nav.tc-menubar li.tc-menubar-item > button.tc-selected {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+}nav.tc-menubar li.tc-menubar-item svg {
+	transition: none;
+	width: 1em;
+	height: 1em;
+	fill: #83657b;
+	fill: #fff;
+}nav.tc-menubar li.tc-menubar-item .tc-menubar-dropdown-arrow svg {
+	width: 0.5em;
+	height: 0.5em;
+}nav.tc-menubar li.tc-menubar-item > a.tc-selected svg,
+nav.tc-menubar li.tc-menubar-item > button.tc-selected svg {
+	fill: #e3fdf6;
+	fill: #5778d8;
+}nav.tc-menubar li.tc-menubar-item > a:hover,
+nav.tc-menubar li.tc-menubar-item > button:hover svg,
+nav.tc-menubar li.tc-menubar-item > button:hover {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar li.tc-menubar-item > a:active,
+nav.tc-menubar li.tc-menubar-item > button:active svg,
+nav.tc-menubar li.tc-menubar-item > button:active {
+	background: #83657b;
+	background: #fff;
+	color: #e3fdf6;
+	color: #5778d8;
+	fill: #e3fdf6;
+	fill: #5778d8;
+	border-radius: 0;
+	text-decoration: none;
+}nav.tc-menubar .tc-drop-down,
+nav.tc-menubar .tc-block-dropdown {
+	max-width: 70vw;
+	max-height: 70vh;
+	overflow: auto;
+}nav.tc-menubar .tc-drop-down a {
+	text-decoration: none;
+}nav.tc-menubar .tc-drop-down .tc-table-of-contents button {
+	display: inline-block;
+	width: auto;
+}nav.tc-menubar .tc-drop-down ol {
+	margin: 0;
+}nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar a,
+nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
+	display: inline;
+	width: auto;
+}nav.tc-menubar .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
+	display: block;
+	width: 100%;
+}@media (max-width: 620px) {.tc-menubar-wide {
+		display: none;
+	}}@media (min-width: 621px) {nav.tc-menubar li.tc-menubar-item.tc-menubar-narrow,
+	.tc-menubar-narrow {
+		display: none;
+	}}@media (max-width: 959px) {.tc-sidebar-scrollable {
+		margin-top: 2em;
+	}}@media (max-width: 620px) {.tc-sidebar-scrollable {
+		margin-top: 2em;
+	}
+}
+@media print {nav.tc-menubar {
+		display: none;
+	}}
 .tc-sidebar-header {
 	text-shadow: 0 1px 0 #e3fdf6;
 }.tc-tiddler-info {
@@ -875,7 +996,7 @@ a.tc-tiddlylink:hover {
 	color: #83657b;
 	fill: #83657b;
 }button:disabled.tc-btn-invisible  {
-	cursor: default; 
+	cursor: default;
 	color: #a193a1;
 }.tc-btn-boxed {
 	font-size: 0.6em;
@@ -1221,6 +1342,9 @@ a.tc-tiddlylink:hover {
 }.tc-tiddler-title-icon {
 	vertical-align: middle;
 	margin-right: .1em;
+}.tc-tiddler-title-icon svg {
+	width: 0.9em;
+	height: 0.9em;
 }.tc-system-title-prefix {
 	color: #a193a1;
 }.tc-titlebar h2 {
@@ -2213,11 +2337,9 @@ a.tc-tiddlylink:hover {
 ** Table of contents
 */.tc-sidebar-lists .tc-table-of-contents {
 	white-space: nowrap;
-}.tc-table-of-contents button {
+}.tc-table-of-contents button,
+.tc-table-of-contents .toc-item-muted {
 	color: #83657b;
-}button + .tc-toc-caption,
-button > .tc-toc-caption{
-	margin-left: .25em;
 }.tc-table-of-contents svg {
 	width: 0.7em;
 	height: 0.7em;
@@ -2530,127 +2652,6 @@ button > .tc-toc-caption{
 }/* Vertical gaps */.tc-tiny-v-gap-bottom {
 	margin-bottom: 3px;
 }
-nav.tc-menubar {
-	position: fixed;
-	z-index: 850;
-	display: inline-block;
-	top: 0;
-	right: 0;
-	left: 0;
-}nav.tc-menubar ul.tc-menubar-list {
-	position: relative;
-	list-style-type: none;
-	margin: 0;
-	padding: 0 0 0 42px;
-	background: #e3fdf6;
-	background: #5778d8;
-	
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-
-}@media (max-width: 959px) {html nav.tc-menubar ul.tc-menubar-list {
-		padding: 0 0 0 8px;
-	}}nav.tc-menubar li.tc-menubar-item {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}nav.tc-menubar .tc-menubar-narrow li.tc-menubar-item {
-	display: block;
-}nav.tc-menubar li.tc-menubar-item > a,
-nav.tc-menubar li.tc-menubar-item > button {
-	display: inline-block;
-/*	text-transform: uppercase; */
-	line-height: 1;
-	font-weight: 700;
-	color: #83657b;
-	color: #fff;
-	fill: #83657b;
-	fill: #fff;
-	text-decoration: none;
-	padding: 0.5em;
-	margin: 0;
-	background: none;
-	border: none;
-	cursor: pointer;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar li.tc-menubar-item > a.tc-selected,
-nav.tc-menubar li.tc-menubar-item > button.tc-selected {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-}nav.tc-menubar li.tc-menubar-item svg {
-	transition: none;
-	width: 1em;
-	height: 1em;
-	fill: #83657b;
-	fill: #fff;
-}nav.tc-menubar li.tc-menubar-item .tc-menubar-dropdown-arrow svg {
-	width: 0.5em;
-	height: 0.5em;
-}nav.tc-menubar li.tc-menubar-item > a.tc-selected svg,
-nav.tc-menubar li.tc-menubar-item > button.tc-selected svg {
-	fill: #e3fdf6;
-	fill: #5778d8;
-}nav.tc-menubar li.tc-menubar-item > a:hover,
-nav.tc-menubar li.tc-menubar-item > button:hover svg,
-nav.tc-menubar li.tc-menubar-item > button:hover {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar li.tc-menubar-item > a:active,
-nav.tc-menubar li.tc-menubar-item > button:active svg,
-nav.tc-menubar li.tc-menubar-item > button:active {
-	background: #83657b;
-	background: #fff;
-	color: #e3fdf6;
-	color: #5778d8;
-	fill: #e3fdf6;
-	fill: #5778d8;
-	border-radius: 0;
-	text-decoration: none;
-}nav.tc-menubar .tc-drop-down,
-nav.tc-menubar .tc-block-dropdown {
-	max-width: 70vw;
-	max-height: 70vh;
-	overflow: auto;
-}nav.tc-menubar .tc-drop-down a {
-	text-decoration: none;
-}nav.tc-menubar .tc-drop-down .tc-table-of-contents button {
-	display: inline-block;
-	width: auto;
-}nav.tc-menubar .tc-drop-down ol {
-	margin: 0;
-}nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar a,
-nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
-	display: inline;
-	width: auto;
-}nav.tc-menubar .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
-	display: block;
-	width: 100%;
-}@media (max-width: 620px) {.tc-menubar-wide {
-		display: none;
-	}}@media (min-width: 621px) {nav.tc-menubar li.tc-menubar-item.tc-menubar-narrow,
-	.tc-menubar-narrow {
-		display: none;
-	}}@media (max-width: 959px) {.tc-sidebar-scrollable {
-		margin-top: 2em;
-	}}@media (max-width: 620px) {.tc-sidebar-scrollable {
-		margin-top: 2em;
-	}
-}
-@media print {nav.tc-menubar {
-		display: none;
-	}}
 .tc-sites-icon {
 	width: 1em;
 	height: 1em;
@@ -2695,7 +2696,7 @@ nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
 <path d="M64.856912,0 C100.203136,0 128.856912,28.653776 128.856912,64 C128.856912,99.346224 100.203136,128 64.856912,128 C29.510688,128 0.856911958,99.346224 0.856911958,64 C0.856911958,28.653776 29.510688,0 64.856912,0 Z M64.856912,16 C38.347244,16 16.856912,37.490332 16.856912,64 C16.856912,90.509668 38.347244,112 64.856912,112 C91.3665799,112 112.856912,90.509668 112.856912,64 C112.856912,37.490332 91.3665799,16 64.856912,16 Z"></path>
 <circle cx="65" cy="64" r="32"></circle>
 </g>
-</svg></span></button></div></p></div><div class=" tc-reveal"><div class="tc-sidebar-lists tc-sidebar-search"><p><div class="tc-search"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><form class="tc-form-inline"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><input class="tc-popup-handle" type="search" value=""></span></span></span></span></span></form></span></span></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="advanced search" class="tc-btn-invisible" title="Advanced search"><svg class="tc-image-advanced-search-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><path d="M74.565 87.985A47.776 47.776 0 0148 96C21.49 96 0 74.51 0 48S21.49 0 48 0s48 21.49 48 48c0 9.854-2.97 19.015-8.062 26.636l34.347 34.347a9.443 9.443 0 010 13.36 9.446 9.446 0 01-13.36 0l-34.36-34.358zM48 80c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z"></path><circle cx="48" cy="48" r="8"></circle><circle cx="28" cy="48" r="8"></circle><circle cx="68" cy="48" r="8"></circle></g></svg></button></span></div><div class="tc-block-dropdown-wrapper tc-reveal" hidden="true"></div></p></div></div><div class=" tc-reveal"><div aria-label="Sidebar" class="tc-sidebar-lists tc-sidebar-tabs" role="region"><p><div class="tc-tab-set tc-sidebar-tabs-main"><div class="tc-tab-buttons tc-sidebar-tabs-main"><button class="" role="switch">Open</button><button class="" role="switch">Recent</button><button class="" role="switch">Tools</button><button class="" role="switch">More</button><button aria-checked="true" class=" tc-tab-selected" role="switch">Table of Contents</button></div><div class="tc-tab-divider tc-sidebar-tabs-main"></div><div class="tc-tab-content tc-sidebar-tabs-main"><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/HelloThere.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">HelloThere</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/Fundraising.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">Fundraising</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/Code%2520of%2520Conduct.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption">Code of Conduct</span></a><span class=" tc-reveal" hidden="true"></span></li></ol></p></div></div></div></div></p></div></div></div></div></div></div><section class="tc-story-river" role="main"><section class="story-backdrop"></section><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="HelloThere" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"><svg class="tc-image-down-arrow tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64.177 100.069a7.889 7.889 0 01-5.6-2.316l-55.98-55.98a7.92 7.92 0 010-11.196c3.086-3.085 8.105-3.092 11.196 0l50.382 50.382 50.382-50.382a7.92 7.92 0 0111.195 0c3.086 3.086 3.092 8.104 0 11.196l-55.98 55.98a7.892 7.892 0 01-5.595 2.316z"></path></svg></button><div class=" tc-reveal" hidden="true"></div><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"><svg class="tc-image-edit-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><path d="M95.627 10.059l-5.656 5.657 11.313 11.313 5.657-5.656-11.314-11.314zm5.657-5.657l1.966-1.966c3.123-3.122 8.194-3.129 11.319-.005 3.117 3.118 3.122 8.192-.005 11.32l-1.966 1.965-11.314-11.314zm-16.97 16.97l-60.25 60.25a8.12 8.12 0 00-.322.342c-.1.087-.198.179-.295.275-5.735 5.735-10.702 22.016-10.702 22.016s16.405-5.09 22.016-10.702c.095-.096.186-.193.272-.292a8.12 8.12 0 00.345-.325l60.25-60.25-11.314-11.313zM35.171 124.19c6.788-.577 13.898-2.272 23.689-5.348 1.825-.573 3.57-1.136 6.336-2.04 16-5.226 21.877-6.807 28.745-7.146 8.358-.413 13.854 2.13 17.58 8.699a4 4 0 006.959-3.946c-5.334-9.406-13.745-13.296-24.933-12.744-7.875.39-14.057 2.052-30.835 7.533-2.739.894-4.46 1.45-6.25 2.012-19.46 6.112-30.77 7.072-39.597 1.747a4 4 0 10-4.132 6.85c6.333 3.82 13.754 5.12 22.438 4.383z"></path></g></svg></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"><svg class="tc-image-close-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M65.086 75.41l-50.113 50.113c-3.121 3.121-8.192 3.126-11.316.002-3.118-3.118-3.123-8.19.002-11.316l50.114-50.114L3.659 13.982C.538 10.86.533 5.79 3.657 2.666c3.118-3.118 8.19-3.123 11.316.002l50.113 50.114L115.2 2.668c3.121-3.121 8.192-3.126 11.316-.002 3.118 3.118 3.123 8.19-.002 11.316L76.4 64.095l50.114 50.114c3.121 3.121 3.126 8.192.002 11.316-3.118 3.118-8.19 3.123-11.316-.002L65.086 75.409z" fill-rule="evenodd"></path></svg></button></span><span><h2 class="tc-title">HelloThere</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href="static/.html"></a> 19th April 2022 at 8:14am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+</svg></span></button></div></p></div><div class=" tc-reveal"><div class="tc-sidebar-lists tc-sidebar-search"><p><div class="tc-search"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><form class="tc-form-inline"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><span class=" tc-keyboard"><input class="tc-popup-handle" type="search" value=""></span></span></span></span></span></form></span></span></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="advanced search" class="tc-btn-invisible" title="Advanced search"><svg class="tc-image-advanced-search-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><path d="M74.565 87.985A47.776 47.776 0 0148 96C21.49 96 0 74.51 0 48S21.49 0 48 0s48 21.49 48 48c0 9.854-2.97 19.015-8.062 26.636l34.347 34.347a9.443 9.443 0 010 13.36 9.446 9.446 0 01-13.36 0l-34.36-34.358zM48 80c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z"></path><circle cx="48" cy="48" r="8"></circle><circle cx="28" cy="48" r="8"></circle><circle cx="68" cy="48" r="8"></circle></g></svg></button></span></div><div class="tc-block-dropdown-wrapper tc-reveal" hidden="true"></div></p></div></div><div class=" tc-reveal"><div aria-label="Sidebar" class="tc-sidebar-lists tc-sidebar-tabs" role="region"><p><div class="tc-tab-set tc-sidebar-tabs-main"><div class="tc-tab-buttons tc-sidebar-tabs-main"><button class="" role="switch">Open</button><button class="" role="switch">Recent</button><button class="" role="switch">Tools</button><button class="" role="switch">More</button><button aria-checked="true" class=" tc-tab-selected" role="switch">Table of Contents</button></div><div class="tc-tab-divider tc-sidebar-tabs-main"></div><div class="tc-tab-content tc-sidebar-tabs-main"><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal" hidden="true"></div><div class=" tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/HelloThere.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">HelloThere</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/Fundraising.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Fundraising</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/Code%2520of%2520Conduct.html"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Code of Conduct</span></a><span class=" tc-reveal" hidden="true"></span></li></ol></p></div></div></div></div></p></div></div></div></div></div></div><section class="tc-story-river" role="main"><section class="story-backdrop"></section><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="HelloThere" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"><svg class="tc-image-down-arrow tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64.177 100.069a7.889 7.889 0 01-5.6-2.316l-55.98-55.98a7.92 7.92 0 010-11.196c3.086-3.085 8.105-3.092 11.196 0l50.382 50.382 50.382-50.382a7.92 7.92 0 0111.195 0c3.086 3.086 3.092 8.104 0 11.196l-55.98 55.98a7.892 7.892 0 01-5.595 2.316z"></path></svg></button><div class=" tc-reveal" hidden="true"></div><button aria-label="edit" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"><svg class="tc-image-edit-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><path d="M95.627 10.059l-5.656 5.657 11.313 11.313 5.657-5.656-11.314-11.314zm5.657-5.657l1.966-1.966c3.123-3.122 8.194-3.129 11.319-.005 3.117 3.118 3.122 8.192-.005 11.32l-1.966 1.965-11.314-11.314zm-16.97 16.97l-60.25 60.25a8.12 8.12 0 00-.322.342c-.1.087-.198.179-.295.275-5.735 5.735-10.702 22.016-10.702 22.016s16.405-5.09 22.016-10.702c.095-.096.186-.193.272-.292a8.12 8.12 0 00.345-.325l60.25-60.25-11.314-11.313zM35.171 124.19c6.788-.577 13.898-2.272 23.689-5.348 1.825-.573 3.57-1.136 6.336-2.04 16-5.226 21.877-6.807 28.745-7.146 8.358-.413 13.854 2.13 17.58 8.699a4 4 0 006.959-3.946c-5.334-9.406-13.745-13.296-24.933-12.744-7.875.39-14.057 2.052-30.835 7.533-2.739.894-4.46 1.45-6.25 2.012-19.46 6.112-30.77 7.072-39.597 1.747a4 4 0 10-4.132 6.85c6.333 3.82 13.754 5.12 22.438 4.383z"></path></g></svg></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"><svg class="tc-image-close-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M65.086 75.41l-50.113 50.113c-3.121 3.121-8.192 3.126-11.316.002-3.118-3.118-3.123-8.19.002-11.316l50.114-50.114L3.659 13.982C.538 10.86.533 5.79 3.657 2.666c3.118-3.118 8.19-3.123 11.316.002l50.113 50.114L115.2 2.668c3.121-3.121 8.192-3.126 11.316-.002 3.118 3.118 3.123 8.19-.002 11.316L76.4 64.095l50.114 50.114c3.121 3.121 3.126 8.192.002 11.316-3.118 3.118-8.19 3.123-11.316-.002L65.086 75.409z" fill-rule="evenodd"></path></svg></button></span><span><h2 class="tc-title">HelloThere</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href="static/.html"></a> 19th April 2022 at 8:14am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
 fill:#83657b;
 color:#83657b;">Table of Contents</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><p>This is the official hub for the TiddlyWiki community.</p><p>Other official TiddlyWiki sites include:</p><ul><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> – user documentation</li><li><a class="tc-tiddlylink-external" href="https://talk.tiddlywiki.org" rel="noopener noreferrer" target="_blank">talk.tiddlywiki.org</a> – user discussion forum</li><li><a class="tc-tiddlylink-external" href="https://links.tiddlywiki.org" rel="noopener noreferrer" target="_blank">links.tiddlywiki.org</a> – collection of links collaboratively curated by the community</li><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com/dev" rel="noopener noreferrer" target="_blank">tiddlywiki.com/dev</a> – internal JavaScript documentation</li></ul></div>
 </div>
