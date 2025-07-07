@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.3.6" />
+<meta name="tiddlywiki-version" content="5.3.7" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -382,12 +382,16 @@ html button {
 	fill: ;
 	background: ;
 	border-color: ;
+	cursor: pointer;
+}button:disabled {
+	cursor: default;
+	color: #a193a1;
 }button:disabled svg {
 	fill: #a193a1;
 }/*
 ** Basic element styles
 */html, body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 	text-rendering: optimizeLegibility; /* Enables kerning and ligatures etc. */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -924,7 +928,8 @@ a.tc-tiddlylink:hover {
 	fill: #83657b;
 }.tc-sidebar-header .tc-title a.tc-tiddlylink-resolves {
 	font-weight: normal;
-}.tc-sidebar-header .tc-sidebar-lists p {
+}.tc-sidebar-header .tc-sidebar-lists p,
+.tc-sidebar-tools-item {
 	margin-top: 3px;
 	margin-bottom: 3px;
 }.tc-sidebar-header .tc-missing-tiddler-label {
@@ -1967,8 +1972,8 @@ a.tc-tiddlylink:hover {
 	border-radius: 4px;
 	font-weight: bold;
 }.tc-plugin-info-chunk .tc-plugin-info-stability-stable {
-	border: 1px solid #008000;
-	color: #008000;
+	border: 1px solid #00b700;
+	color: #00b700;
 }.tc-plugin-info-chunk .tc-plugin-info-stability-experimental {
 	border: 1px solid #c07c00;
 	color: #c07c00;
@@ -3097,12 +3102,7 @@ ol.doc-github-contributors li {
 </head>
 <body class="tc-body">
 
-<div class="tc-page-container tc-page-view-classic tc-language-en-GB"><div class="tc-dropzone tc-page-container-inner"><div class="tc-sidebar-scrollable" style="overflow-y:auto;overflow-x:auto;-webkit-overflow-scrolling:touch;"><div><div class="tc-sidebar-header"><div class=" tc-reveal"><div class=" tc-reveal"><h1 class="tc-site-title"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/HelloThere.html">tiddlywiki.org</a></h1></div><div class=" tc-reveal"><div class="tc-site-subtitle">community matters for TiddlyWiki</div></div><div class=" tc-reveal"><p><div class="tc-page-controls"><button aria-label="new tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fnew-tiddler" title="Create a new tiddler"><svg class="tc-image-new-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M56 72H8.007C3.591 72 0 68.418 0 64c0-4.41 3.585-8 8.007-8H56V8.007C56 3.591 59.582 0 64 0c4.41 0 8 3.585 8 8.007V56h47.993c4.416 0 8.007 3.582 8.007 8 0 4.41-3.585 8-8.007 8H72v47.993c0 4.416-3.582 8.007-8 8.007-4.41 0-8-3.585-8-8.007V72z" fill-rule="evenodd"></path></svg></button><button aria-label="control panel" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fcontrol-panel " title="Open control panel">
-
-<svg class="tc-image-options-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M110.488 76a47.712 47.712 0 01-5.134 12.384l6.724 6.724c3.123 3.123 3.132 8.192.011 11.313l-5.668 5.668c-3.12 3.12-8.186 3.117-11.313-.01l-6.724-6.725c-3.82 2.258-7.98 4-12.384 5.134v9.505c0 4.417-3.578 8.007-7.992 8.007h-8.016C55.58 128 52 124.415 52 119.993v-9.505a47.712 47.712 0 01-12.384-5.134l-6.724 6.725c-3.123 3.122-8.192 3.131-11.313.01l-5.668-5.668c-3.12-3.12-3.116-8.186.01-11.313l6.725-6.724c-2.257-3.82-4-7.98-5.134-12.384H8.007C3.591 76 0 72.422 0 68.01v-8.017C0 55.58 3.585 52 8.007 52h9.505a47.712 47.712 0 015.134-12.383l-6.724-6.725c-3.123-3.122-3.132-8.191-.011-11.312l5.668-5.669c3.12-3.12 8.186-3.116 11.313.01l6.724 6.725c3.82-2.257 7.98-4 12.384-5.134V8.007C52 3.591 55.578 0 59.992 0h8.016C72.42 0 76 3.585 76 8.007v9.505a47.712 47.712 0 0112.384 5.134l6.724-6.724c3.123-3.123 8.192-3.132 11.313-.01l5.668 5.668c3.12 3.12 3.116 8.186-.01 11.312l-6.725 6.725c2.257 3.82 4 7.979 5.134 12.383h9.505c4.416 0 8.007 3.578 8.007 7.992v8.017c0 4.411-3.585 7.991-8.007 7.991h-9.505zM64 96c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z" fill-rule="evenodd"></path></svg>
-
-
-</button><button aria-label="save changes" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fsave-wiki" title="Save changes"><span class="tc-dirty-indicator"><svg class="tc-image-save-button-dynamic tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt">
+<div class="tc-page-container tc-page-view-classic tc-language-en-GB"><div class="tc-dropzone tc-page-container-inner"><div class="tc-sidebar-scrollable" style="overflow-y:auto;overflow-x:auto;-webkit-overflow-scrolling:touch;"><div><div class="tc-sidebar-header"><div class=" tc-reveal"><div class=" tc-reveal"><h1 class="tc-site-title"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="static/HelloThere.html">tiddlywiki.org</a></h1></div><div class=" tc-reveal"><div class="tc-site-subtitle">community matters for TiddlyWiki</div></div><div class=" tc-reveal"><p><div class="tc-page-controls"><button aria-label="new tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fnew-tiddler" title="Create a new tiddler"><svg class="tc-image-new-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M56 72H8.007C3.591 72 0 68.418 0 64c0-4.41 3.585-8 8.007-8H56V8.007C56 3.591 59.582 0 64 0c4.41 0 8 3.585 8 8.007V56h47.993c4.416 0 8.007 3.582 8.007 8 0 4.41-3.585 8-8.007 8H72v47.993c0 4.416-3.582 8.007-8 8.007-4.41 0-8-3.585-8-8.007V72z" fill-rule="evenodd"></path></svg></button><button aria-label="control panel" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fcontrol-panel " title="Open control panel"><svg class="tc-image-options-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M110.488 76a47.712 47.712 0 01-5.134 12.384l6.724 6.724c3.123 3.123 3.132 8.192.011 11.313l-5.668 5.668c-3.12 3.12-8.186 3.117-11.313-.01l-6.724-6.725c-3.82 2.258-7.98 4-12.384 5.134v9.505c0 4.417-3.578 8.007-7.992 8.007h-8.016C55.58 128 52 124.415 52 119.993v-9.505a47.712 47.712 0 01-12.384-5.134l-6.724 6.725c-3.123 3.122-8.192 3.131-11.313.01l-5.668-5.668c-3.12-3.12-3.116-8.186.01-11.313l6.725-6.724c-2.257-3.82-4-7.98-5.134-12.384H8.007C3.591 76 0 72.422 0 68.01v-8.017C0 55.58 3.585 52 8.007 52h9.505a47.712 47.712 0 015.134-12.383l-6.724-6.725c-3.123-3.122-3.132-8.191-.011-11.312l5.668-5.669c3.12-3.12 8.186-3.116 11.313.01l6.724 6.725c3.82-2.257 7.98-4 12.384-5.134V8.007C52 3.591 55.578 0 59.992 0h8.016C72.42 0 76 3.585 76 8.007v9.505a47.712 47.712 0 0112.384 5.134l6.724-6.724c3.123-3.123 8.192-3.132 11.313-.01l5.668 5.668c3.12 3.12 3.116 8.186-.01 11.312l-6.725 6.725c2.257 3.82 4 7.979 5.134 12.383h9.505c4.416 0 8.007 3.578 8.007 7.992v8.017c0 4.411-3.585 7.991-8.007 7.991h-9.505zM64 96c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z" fill-rule="evenodd"></path></svg></button><button aria-label="save changes" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fsave-wiki" title="Save changes"><span class="tc-dirty-indicator"><svg class="tc-image-save-button-dynamic tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt">
 <g class="tc-image-save-button-dynamic-clean">
 <path d="M120.783 34.33c4.641 8.862 7.266 18.948 7.266 29.646 0 35.347-28.653 64-64 64-35.346 0-64-28.653-64-64 0-35.346 28.654-64 64-64 18.808 0 35.72 8.113 47.43 21.03l2.68-2.68c3.13-3.13 8.197-3.132 11.321-.008 3.118 3.118 3.121 8.193-.007 11.32l-4.69 4.691zm-12.058 12.058a47.876 47.876 0 013.324 17.588c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48c14.39 0 27.3 6.332 36.098 16.362L58.941 73.544 41.976 56.578c-3.127-3.127-8.201-3.123-11.32-.005-3.123 3.124-3.119 8.194.006 11.319l22.617 22.617a7.992 7.992 0 005.659 2.347c2.05 0 4.101-.783 5.667-2.349l44.12-44.12z" fill-rule="evenodd"></path>
 </g>
