@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="generator" content="TiddlyWiki" />
-<meta name="tiddlywiki-version" content="5.3.8" />
+<meta name="tiddlywiki-version" content="5.4.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="format-detection" content="telephone=no">
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
@@ -84,7 +84,310 @@ Error message and password prompt
 </style>
 </div>
 <style type="text/css">
-/*
+/* Tiddlywiki's CSS properties */:root {
+	
+	--tpc-alert-background: #e3fdf6;
+	
+	--tpc-alert-border: #b99e2f;
+	
+	--tpc-alert-highlight: #d33682;
+	
+	--tpc-alert-muted-foreground: #75586e;
+	
+	--tpc-background: #e3fdf6;
+	
+	--tpc-blockquote-bar: #a193a1;
+	
+	--tpc-button-background: ;
+	
+	--tpc-button-border: ;
+	
+	--tpc-button-foreground: ;
+	
+	--tpc-code-background: #d5eee8;
+	
+	--tpc-code-border: #d5eee8;
+	
+	--tpc-code-foreground: #83657b;
+	
+	--tpc-diff-delete-background: #ffc9c9;
+	
+	--tpc-diff-delete-foreground: #83657b;
+	
+	--tpc-diff-equal-background: ;
+	
+	--tpc-diff-equal-foreground: #83657b;
+	
+	--tpc-diff-insert-background: #aaefad;
+	
+	--tpc-diff-insert-foreground: #83657b;
+	
+	--tpc-diff-invisible-background: ;
+	
+	--tpc-diff-invisible-foreground: #a193a1;
+	
+	--tpc-dirty-indicator: #ff0000;
+	
+	--tpc-download-background: #4e7baa;
+	
+	--tpc-download-foreground: #e3fdf6;
+	
+	--tpc-dragger-background: #83657b;
+	
+	--tpc-dragger-foreground: #e3fdf6;
+	
+	--tpc-dropdown-background: #e3fdf6;
+	
+	--tpc-dropdown-border: #a193a1;
+	
+	--tpc-dropdown-tab-background: #d5eee8;
+	
+	--tpc-dropdown-tab-background-selected: #e3fdf6;
+	
+	--tpc-dropzone-background: rgba(0,200,0,0.7);
+	
+	--tpc-external-link-background: inherit;
+	
+	--tpc-external-link-background-hover: inherit;
+	
+	--tpc-external-link-background-visited: inherit;
+	
+	--tpc-external-link-foreground: #6c71c4;
+	
+	--tpc-external-link-foreground-hover: inherit;
+	
+	--tpc-external-link-foreground-visited: #7c81b0;
+	
+	--tpc-footnote-target-background: #ecf2ff;
+	
+	--tpc-foreground: #83657b;
+	
+	--tpc-highlight-background: #ffff00;
+	
+	--tpc-highlight-foreground: #000000;
+	
+	--tpc-message-background: #e3fdf6;
+	
+	--tpc-message-border: #cfd6e6;
+	
+	--tpc-message-foreground: #83657b;
+	
+	--tpc-modal-backdrop: #d5eee8;
+	
+	--tpc-modal-background: #e3fdf6;
+	
+	--tpc-modal-border: #999999;
+	
+	--tpc-modal-footer-background: #d5eee8;
+	
+	--tpc-modal-footer-border: #cccccc;
+	
+	--tpc-modal-header-border: #cccccc;
+	
+	--tpc-muted-foreground: #a193a1;
+	
+	--tpc-network-activity-foreground: #448844;
+	
+	--tpc-notification-background: #d5eee8;
+	
+	--tpc-notification-border: #cccccc;
+	
+	--tpc-page-background: #d5eee8;
+	
+	--tpc-pre-background: #d5eee8;
+	
+	--tpc-pre-border: #d5eee8;
+	
+	--tpc-primary: #4e7baa;
+	
+	--tpc-select-tag-background: ;
+	
+	--tpc-select-tag-foreground: ;
+	
+	--tpc-selection-background: ;
+	
+	--tpc-selection-foreground: ;
+	
+	--tpc-sidebar-button-foreground: #83657b;
+	
+	--tpc-sidebar-controls-foreground: #83657b;
+	
+	--tpc-sidebar-controls-foreground-hover: ;
+	
+	--tpc-sidebar-foreground: #83657b;
+	
+	--tpc-sidebar-foreground-shadow: #e3fdf6;
+	
+	--tpc-sidebar-muted-foreground: #a193a1;
+	
+	--tpc-sidebar-muted-foreground-hover: ;
+	
+	--tpc-sidebar-tab-background: #c5ded8;
+	
+	--tpc-sidebar-tab-background-selected: #d5eee8;
+	
+	--tpc-sidebar-tab-border: #cccccc;
+	
+	--tpc-sidebar-tab-border-selected: #cccccc;
+	
+	--tpc-sidebar-tab-divider: #d8d8d8;
+	
+	--tpc-sidebar-tab-foreground: #83657b;
+	
+	--tpc-sidebar-tab-foreground-selected: #83657b;
+	
+	--tpc-sidebar-tiddler-link-foreground: #968394;
+	
+	--tpc-sidebar-tiddler-link-foreground-hover: ;
+	
+	--tpc-site-title-foreground: #a193a1;
+	
+	--tpc-stability-deprecated: #ff0000;
+	
+	--tpc-stability-experimental: #c07c00;
+	
+	--tpc-stability-legacy: #0000ff;
+	
+	--tpc-stability-stable: #00b700;
+	
+	--tpc-static-alert-foreground: #aaaaaa;
+	
+	--tpc-tab-background: #d5eee8;
+	
+	--tpc-tab-background-selected: #e3fdf6;
+	
+	--tpc-tab-border: #cccccc;
+	
+	--tpc-tab-border-selected: #cccccc;
+	
+	--tpc-tab-divider: #d8d8d8;
+	
+	--tpc-tab-foreground: #83657b;
+	
+	--tpc-tab-foreground-selected: #83657b;
+	
+	--tpc-table-border: #dddddd;
+	
+	--tpc-table-footer-background: #a8a8a8;
+	
+	--tpc-table-header-background: #d5eee8;
+	
+	--tpc-tag-background: #d5eee8;
+	
+	--tpc-tag-foreground: #83657b;
+	
+	--tpc-testcase-accent-level-1: #c1eaff;
+	
+	--tpc-testcase-accent-level-2: #E3B740;
+	
+	--tpc-testcase-accent-level-3: #5FD564;
+	
+	--tpc-tiddler-background: #e3fdf6;
+	
+	--tpc-tiddler-border: #e3fdf6;
+	
+	--tpc-tiddler-controls-foreground: #bbc0c4;
+	
+	--tpc-tiddler-controls-foreground-hover: #888888;
+	
+	--tpc-tiddler-controls-foreground-selected: #444444;
+	
+	--tpc-tiddler-editor-background: #d5eee8;
+	
+	--tpc-tiddler-editor-border: #cccccc;
+	
+	--tpc-tiddler-editor-border-image: #ffffff;
+	
+	--tpc-tiddler-editor-fields-even: #e0e8e0;
+	
+	--tpc-tiddler-editor-fields-odd: #f0f4f0;
+	
+	--tpc-tiddler-info-background: #d5eee8;
+	
+	--tpc-tiddler-info-border: #dddddd;
+	
+	--tpc-tiddler-info-tab-background: #d5eee8;
+	
+	--tpc-tiddler-link-background: #e3fdf6;
+	
+	--tpc-tiddler-link-foreground: #4e7baa;
+	
+	--tpc-tiddler-subtitle-foreground: #c0c0c0;
+	
+	--tpc-tiddler-title-foreground: #a193a1;
+	
+	--tpc-toolbar-cancel-button: ;
+	
+	--tpc-toolbar-close-button: ;
+	
+	--tpc-toolbar-delete-button: ;
+	
+	--tpc-toolbar-done-button: ;
+	
+	--tpc-toolbar-edit-button: ;
+	
+	--tpc-toolbar-info-button: ;
+	
+	--tpc-toolbar-new-button: ;
+	
+	--tpc-toolbar-options-button: ;
+	
+	--tpc-toolbar-save-button: ;
+	
+	--tpc-untagged-background: #999999;
+	
+	--tpc-very-muted-foreground: #888888;
+	
+	--tpc-wikilist-background: #e5e5e5;
+	
+	--tpc-wikilist-button-background: #acacac;
+	
+	--tpc-wikilist-button-foreground: #000000;
+	
+	--tpc-wikilist-button-open: #4fb82b;
+	
+	--tpc-wikilist-button-open-hover: #009300;
+	
+	--tpc-wikilist-button-remove: #d85778;
+	
+	--tpc-wikilist-button-remove-hover: #ff0000;
+	
+	--tpc-wikilist-button-reveal: #5778d8;
+	
+	--tpc-wikilist-button-reveal-hover: #0000ff;
+	
+	--tpc-wikilist-droplink-dragover: #ffc0c0;
+	
+	--tpc-wikilist-info: #000000;
+	
+	--tpc-wikilist-item: #ffffff;
+	
+	--tpc-wikilist-title: #666666;
+	
+	--tpc-wikilist-title-svg: #666666;
+	
+	--tpc-wikilist-toolbar-background: #d3d3d3;
+	
+	--tpc-wikilist-toolbar-foreground: #888888;
+	
+	--tpc-wikilist-url: #aaaaaa;
+	/* CSS settings */
+	--tp-code-wrapping: pre-wrap;
+	--tp-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", sans-serif, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	--tp-code-font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+	--tp-editor-font-family: ;
+	--tp-font-size: 14px;
+	--tp-line-height: 20px;
+	--tp-body-font-size: 17px;
+	--tp-body-line-height: 24px;
+	--tp-story-left: 0px;
+	--tp-story-top: 0px;
+	--tp-story-right: 770px;
+	--tp-story-width: ;
+	--tp-tiddler-width: 686px;
+	--tp-sidebar-breakpoint: 960px;
+	--tp-sidebar-width: 450px;--tp-animation-duration: {{{ [{$:/config/AnimationDuration}addsuffix[ms]] }}};
+}/*
 ** Start with the normalize CSS reset, and then belay some of its effects
 *//*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -433,9 +736,11 @@ html button {
 	border-radius: 3px;
 	font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }blockquote {
-	border-left: 5px solid #a193a1;
-	margin-left: 25px;
-	padding-left: 10px;
+	border-inline-start: 5px solid #a193a1;
+		-webkit-margin-start: 25px;
+	margin-inline-start: 25px;
+		-webkit-padding-start: 10px;
+	padding-inline-start: 10px;
 	quotes: "\201C""\201D""\2018""\2019";
 }blockquote > div {
 	margin-top: 1em;
@@ -444,9 +749,11 @@ html button {
 	font-family: Georgia, serif;
 	position: relative;
 	background: #d5eee8;
-	border-left: none;
-	margin-left: 50px;
-	margin-right: 50px;
+	border-inline-start: none;
+		-webkit-margin-start: 50px;
+	margin-inline-start: 50px;
+	-webkit-margin-end: ;
+	margin-inline-end: ;
 	padding: 10px;
 	border-radius: 8px;
 }blockquote.tc-big-quote cite:before {
@@ -498,7 +805,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }.tc-muted {
 	color: #a193a1;
 }svg.tc-image-button {
-	padding: 0px 1px 1px 0px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+		-webkit-padding-start: 0px;
+	padding-inline-start: 0px;
+	-webkit-padding-end: 1px;
+	padding-inline-end: 1px;
 }.tc-icon-wrapper > svg {
 	width: 1em;
 	height: 1em;
@@ -609,6 +921,7 @@ Tiddler frame in story river
 	height: 600px;
 }:root {
 	color-scheme: light;
+	text-autospace: normal;
 }/*
 ** Links
 */button.tc-tiddlylink,
@@ -760,7 +1073,8 @@ a.tc-tiddlylink:hover {
 	width: 1em;
 	fill: #a193a1;
 }.tc-btn-text {
-	margin-left: 7px;
+		-webkit-margin-start: 7px;
+	margin-inline-start: 7px;
 }/* used for documentation "fake" buttons */
 .tc-btn-standard {
 	line-height: 1.8;
@@ -811,7 +1125,8 @@ a.tc-tiddlylink:hover {
 	border: none;
 	width: 100%;
 	width: calc(100% + 2px);
-	margin-left: -43px;
+		-webkit-margin-start: -43px;
+	margin-inline-start: -43px;
 	text-align: center;
 	border-top: 2px solid #d5eee8;
 	margin-top: 4px;
@@ -831,7 +1146,8 @@ a.tc-tiddlylink:hover {
 	border: none;
 	width: 23px;
 	text-align: center;
-	margin-left: -35px;
+		-webkit-margin-start: -35px;
+	margin-inline-start: -35px;
 	top: 6px;
 	bottom: 6px;
 }.tc-fold-banner:hover {
@@ -841,7 +1157,8 @@ a.tc-tiddlylink:hover {
 		width: calc(100% + 59px);
 	}.tc-fold-banner {
 		width: 16px;
-		margin-left: -16px;
+			-webkit-margin-start: -16px;
+	margin-inline-start: -16px;
 		font-size: 0.75em;
 	}}/*
 ** Tags and missing tiddlers
@@ -975,17 +1292,22 @@ a.tc-tiddlylink:hover {
 	}.tc-sidebar-scrollable {
 		position: fixed;
 		top: 0px;
-		left: 770px;
+		inset-inline-start: 770px;
 		bottom: 0;
-		right: 0;
+		inset-inline-end: 0;
 		overflow-y: auto;
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 		margin: 0 0 0 -42px;
 		padding: 71px 0 28px 42px;
-	}html[dir="rtl"] .tc-sidebar-scrollable {
-		left: auto;
-		right: 770px;
+	}@supports not (inset-inline-start: 0) {
+		.tc-sidebar-scrollable {
+			left: 770px;
+			right: 0;
+		}html[dir="rtl"] .tc-sidebar-scrollable {
+			left: auto;
+			right: 770px;
+		}
 	}.tc-story-river {
 		position: relative;
 		left: 0px;
@@ -1016,7 +1338,6 @@ a.tc-tiddlylink:hover {
 	border: 1px solid #e3fdf6;
 }
 .tc-tiddler-info {
-	overflow: hidden;
 	padding: 14px 42px 14px 42px;
 	background-color: #d5eee8;
 	border-top: 1px solid #dddddd;
@@ -1029,7 +1350,10 @@ a.tc-tiddlylink:hover {
 	border-bottom: 1px solid #d5eee8;
 }@media (max-width: 959px) {.tc-tiddler-info {
 		padding: 14px 14px 14px 14px;
-	}}.tc-view-field-table {
+	}}.tc-tiddler-info-controls {
+	position: absolute;
+	inset-inline-end: 0;
+}.tc-view-field-table {
 	width: 100%;
 }.tc-view-field-name {
 	width: 1%; /* Makes this column be as narrow as possible */
@@ -1065,7 +1389,8 @@ a.tc-tiddlylink:hover {
 	color: #a193a1;
 }.tc-tiddler-title-icon {
 	vertical-align: middle;
-	margin-right: .1em;
+		-webkit-margin-end: .1em;
+	margin-inline-end: .1em;
 }.tc-tiddler-title-icon svg {
 	width: 0.9em;
 	height: 0.9em;
@@ -1096,7 +1421,7 @@ a.tc-tiddlylink:hover {
 	font-style: italic;
 	font-weight: normal;
 }.tc-tiddler-frame .tc-tiddler-controls {
-	float: right;
+	float: inline-end;
 	padding: 3px; /* make space for outline */
 }.tc-tiddler-controls .tc-drop-down {
 	font-size: 0.6em;
@@ -1413,7 +1738,8 @@ a.tc-tiddlylink:hover {
 }/*
 ** Storyview Classes
 */.tc-viewswitcher .tc-image-button {
-	margin-right: .3em;
+		-webkit-margin-end: .3em;
+	margin-inline-end: .3em;
 }.tc-page-container.tc-page-view-zoomin .tc-tiddler-frame {
 	position: absolute;
 	display: block;
@@ -1460,7 +1786,7 @@ a.tc-tiddlylink:hover {
 	display: block;
 	padding: 0 14px 0 14px;
 	width: 100%;
-	text-align: left;
+	text-align: start;
 	color: #83657b;
 	line-height: 1.4;
 }.tc-drop-down .tc-tab-set .tc-tab-buttons button {
@@ -1664,7 +1990,7 @@ a.tc-tiddlylink:hover {
 	display: block;
 	padding-top: 14px;
 	vertical-align: top;
-	text-align: right;
+	text-align: end;
 	margin-bottom: inherit;
 	margin-right: -1px;
 	max-width: 33%;
@@ -1696,18 +2022,18 @@ a.tc-tiddlylink:hover {
 	width: 100%;
 	margin-top: 3px;
 	margin-right: 0;
-	text-align: right;
+	text-align: end;
 	background-color: #d5eee8;
-	border-left: 1px solid #cccccc;
+	border-inline-start: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
-	border-right: none;
-	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+	border-inline-end: none;
+	border-start-start-radius: 2px;
+	border-end-start-radius: 2px;
+	border-start-end-radius: 0;
+	border-end-end-radius: 0;
 }.tc-tab-buttons.tc-vertical button.tc-tab-selected {
 	background-color: #e3fdf6;
-	border-right: 1px solid #e3fdf6;
+	border-inline-end: 1px solid #e3fdf6;
 }.tc-tab-divider {
 	border-top: 1px solid #d8d8d8;
 }.tc-tab-divider.tc-vertical  {
@@ -1718,8 +2044,9 @@ a.tc-tiddlylink:hover {
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 0;
-	padding-left: 14px;
-	border-left: 1px solid #cccccc;
+		-webkit-padding-start: 14px;
+	padding-inline-start: 14px;
+	border-inline-start: 1px solid #cccccc;
 	-webkit-flex: 1 0 70%;
 	flex: 1 0 70%;
 	overflow: auto;
@@ -1818,7 +2145,16 @@ a.tc-tiddlylink:hover {
 	height: auto;
 }/*
 ** Import table
-*/.tc-import-table {
+*/.tc-import-option {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	background: #d5eee8;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+}.tc-import-table {
 	width: 100%;
 }.tc-import-table svg.tc-image-edit-button {
 	max-width: unset;
@@ -1849,7 +2185,7 @@ a.tc-tiddlylink:hover {
 }.tc-alert-toolbar {
 	position: absolute;
 	top: 7px;
-	right: 7px;
+	inset-inline-end: 7px;
 	line-height: 0;
 }.tc-alert-toolbar svg {
 	fill: #75586e;
@@ -1901,6 +2237,8 @@ a.tc-tiddlylink:hover {
 ** Control panel
 */.tc-control-panel td {
 	padding: 4px;
+}.tc-control-panel table > tbody > tr > td {
+	text-align: start;
 }.tc-control-panel table, .tc-control-panel table input, .tc-control-panel table textarea {
 	width: 100%;
 }.tc-control-panel-setting {
@@ -2079,7 +2417,12 @@ a.tc-tiddlylink:hover {
 }.tc-chooser-item {
 	border-bottom: 1px solid #d5eee8;
 	border-top: 1px solid #d5eee8;
-	padding: 2px 4px 2px 14px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+		-webkit-padding-start: 14px;
+	padding-inline-start: 14px;
+	-webkit-padding-end: 4px;
+	padding-inline-end: 4px;
 }.tc-drop-down .tc-chooser-item {
 	padding: 2px;
 }.tc-chosen,
@@ -2098,7 +2441,8 @@ a.tc-tiddlylink:hover {
 .tc-drop-down .tc-chooser-item .tc-tiddlylink:hover {
 	color: #83657b;
 }.tc-chosen > .tc-tiddlylink:before {
-	margin-left: -10px;
+		-webkit-margin-start: -10px;
+	margin-inline-start: -10px;
 	position: relative;
 	content: "» ";
 }.tc-chooser-item svg,
@@ -2139,9 +2483,11 @@ a.tc-tiddlylink:hover {
 	fill: #83657b;
 }.tc-table-of-contents ol {
 	list-style-type: none;
-	padding-left: 0;
+		-webkit-padding-start: 0;
+	padding-inline-start: 0;
 }.tc-table-of-contents ol ol {
-	padding-left: 1em;
+		-webkit-padding-start: 1em;
+	padding-inline-start: 1em;
 }.tc-table-of-contents li {
 	font-size: 1.0em;
 	font-weight: bold;
@@ -2166,7 +2512,8 @@ a.tc-tiddlylink:hover {
 }.tc-tabbed-table-of-contents .tc-table-of-contents {
 	z-index: 100;
 	display: inline-block;
-	padding-left: 1em;
+		-webkit-padding-start: 1em;
+	padding-inline-start: 1em;
 	max-width: 50%;
 	-webkit-flex: 0 0 auto;
 	flex: 0 0 auto;
@@ -2274,16 +2621,12 @@ a.tc-tiddlylink:hover {
 	width: 3em;
 	height: 3em;
 	
--webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-	-moz-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 		filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 
 }.tc-thumbnail-wrapper:hover .tc-thumbnail-icon svg,
 .tc-thumbnail-wrapper:hover .tc-thumbnail-icon img {
 	fill: #fff;
 	
--webkit-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.6));
-	-moz-filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.6));
 		filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.6));
 
 }.tc-thumbnail-icon {
@@ -2345,13 +2688,16 @@ a.tc-tiddlylink:hover {
 }/*
 ** Tree macro
 */.tc-tree div {
-	padding-left: 14px;
+		-webkit-padding-start: 14px;
+	padding-inline-start: 14px;
 }.tc-tree ol {
 	list-style-type: none;
-	padding-left: 0;
+		-webkit-padding-start: 0;
+	padding-inline-start: 0;
 	margin-top: 0;
 }.tc-tree ol ol {
-	padding-left: 1em;
+		-webkit-padding-start: 1em;
+	padding-inline-start: 1em;
 }.tc-tree button {
 	color: #acacac;
 }.tc-tree svg {
@@ -2428,7 +2774,8 @@ a.tc-tiddlylink:hover {
 	line-height: 0;
 	border-radius: 1em;
 	vertical-align: text-bottom;
-	margin-right: 0.25em;
+		-webkit-margin-end: 0.25em;
+	margin-inline-end: 0.25em;
 }.tc-test-case-result-icon-pass {
 	background-color: green;
 }.tc-test-case-result-icon-fail {
@@ -2446,7 +2793,7 @@ a.tc-tiddlylink:hover {
 }.tc-test-case-header > h2 a.tc-tiddlylink-missing {
 	font-style: normal;
 }.tc-test-case-toolbar {
-	float: right;
+	float: inline-end;
 }.tc-test-case-toolbar svg {
 	fill: #bbc0c4;
 }.tc-test-case-toolbar .tc-drop-down {
@@ -2524,27 +2871,69 @@ a.tc-tiddlylink:hover {
 	margin-left: .25em;
 	margin-right: .25em;
 }.tc-tiny-gap-left {
-	margin-left: .25em;
+		-webkit-margin-start: .25em;
+	margin-inline-start: .25em;
 }.tc-tiny-gap-right {
-	margin-right: .25em;
+		-webkit-margin-end: .25em;
+	margin-inline-end: .25em;
 }.tc-small-gap {
 	margin-left: .5em;
 	margin-right: .5em;
 }.tc-small-gap-left {
-	margin-left: .5em;
+		-webkit-margin-start: .5em;
+	margin-inline-start: .5em;
 }.tc-small-gap-right {
-	margin-right: .5em;
+		-webkit-margin-end: .5em;
+	margin-inline-end: .5em;
 }.tc-big-gap {
 	margin-left: 1em;
 	margin-right: 1em;
 }.tc-big-gap-left {
-	margin-left: 1em;
+		-webkit-margin-start: 1em;
+	margin-inline-start: 1em;
 }.tc-big-gap-right {
-	margin-right: 1em;
+		-webkit-margin-end: 1em;
+	margin-inline-end: 1em;
 }.tc-word-break {
 	word-break: break-all;
 }/* Vertical gaps */.tc-tiny-v-gap-bottom {
 	margin-bottom: 3px;
+}/* TODO: Remove the following rule once 2020 baseline is supported */
+@supports not (border-inline-start: 1px solid #000000) {
+	blockquote {
+		border-left: 5px solid #a193a1;
+	}blockquote.tc-big-quote {
+		border-left: none;
+	}.tc-tab-buttons.tc-vertical button {
+		border-left: 1px solid #cccccc;
+		border-right: none;
+	}.tc-tab-buttons.tc-vertical button.tc-tab-selected {
+		border-right: 1px solid #e3fdf6;
+	}.tc-tab-content.tc-vertical {
+		border-left: 1px solid #cccccc;
+	}
+}/* TODO: Remove the following rule once 2021 baseline is supported */
+@supports not (border-start-start-radius: 0px) {
+	.tc-tab-buttons.tc-vertical button {
+		border-top-left-radius: 2px;
+		border-bottom-left-radius: 2px;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}/* TODO: Remove the following rule once 2021 baseline is supported */
+@supports not (inset-inline-start: 0) {
+	.tc-tiddler-info-controls {
+		right: 0;
+	}.tc-alert-toolbar {
+		right: 7px;
+	}
+}/* TODO: Remove the following rule once 2023 baseline is supported */
+@supports not (float: inline-end) {
+	.tc-test-case-toolbar {
+		float: right;
+	}.tc-tiddler-frame .tc-tiddler-controls {
+		float: right;
+	}
 }nav.tc-menubar {
 	position: fixed;
 	z-index: 850;
@@ -2560,8 +2949,6 @@ a.tc-tiddlylink:hover {
 	background: #e3fdf6;
 	background: #5778d8;
 	
--webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 
 }@media (max-width: 959px) {html nav.tc-menubar ul.tc-menubar-list {
@@ -2669,150 +3056,70 @@ nav.tc-menubar .tc-drop-down .tc-menubar-dropdown-sidebar button {
 .tc-sidebar-header {
 	text-shadow: 0 1px 0 #e3fdf6;
 }.tc-tiddler-info {
-	
--webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
-		box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
-
+	box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
 }@media screen {
 	.tc-tiddler-frame {
-		
--webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-
 	}
 }@media (max-width: 959px) {
 	.tc-tiddler-frame {
-		
--webkit-box-shadow: none;
-	-moz-box-shadow: none;
 		box-shadow: none;
-
 	}
 }.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {
-	
--webkit-transition: fill 150ms ease-in-out;
-	-moz-transition: fill 150ms ease-in-out;
-		transition: fill 150ms ease-in-out;
-
+	transition: fill 150ms ease-in-out;
 }.tc-tiddler-controls button.tc-selected,
 .tc-page-controls button.tc-selected {
-	
--webkit-filter: drop-shadow(0px -1px 2px rgba(0,0,0,0.25));
-	-moz-filter: drop-shadow(0px -1px 2px rgba(0,0,0,0.25));
-		filter: drop-shadow(0px -1px 2px rgba(0,0,0,0.25));
-
+	filter: drop-shadow(0px -1px 2px rgba(0,0,0,0.25));
 }.tc-tiddler-frame input.tc-edit-texteditor,
 .tc-tiddler-frame select.tc-edit-texteditor {
-	
--webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-		box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-
+	box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
 }.tc-edit-tags {
-	
--webkit-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-	-moz-box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-		box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
-
+	box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.15);
 }.tc-tiddler-frame .tc-edit-tags input.tc-edit-texteditor {
-	
--webkit-box-shadow: none;
-	-moz-box-shadow: none;
-		box-shadow: none;
-
+	box-shadow: none;
 	border: none;
 	outline: none;
 }textarea.tc-edit-texteditor {
 	font-family: ;
 }canvas.tc-edit-bitmapeditor  {
-	
--webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }.tc-drop-down {
 	border-radius: 4px;
-	
--webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }.tc-block-dropdown {
 	border-radius: 4px;
-	
--webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }.tc-modal {
 	border-radius: 6px;
-	
--webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-		box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
 }.tc-modal-footer {
 	border-radius: 0 0 6px 6px;
-	
--webkit-box-shadow: inset 0 1px 0 #fff;
-	-moz-box-shadow: inset 0 1px 0 #fff;
-		box-shadow: inset 0 1px 0 #fff;
-;
+	box-shadow: inset 0 1px 0 #fff;
 }.tc-alert {
 	border-radius: 6px;
-	
--webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.6);
-	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.6);
-		box-shadow: 0 3px 7px rgba(0,0,0,0.6);
-
+	box-shadow: 0 3px 7px rgba(0,0,0,0.6);
 }.tc-notification {
 	border-radius: 6px;
-	
--webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-		box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-
+	box-shadow: 0 3px 7px rgba(0,0,0,0.3);
 	text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
 }.tc-sidebar-lists .tc-tab-set .tc-tab-divider {
 	border-top: none;
 	height: 1px;
-	
-background-image: linear-gradient(left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
-background-image: -o-linear-gradient(left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
-background-image: -moz-linear-gradient(left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
-background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
-background-image: -ms-linear-gradient(left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
-
+	background-image: linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%); 
+}/* HACK: :dir should be used here. html[dir="rtl"] rules are used to support browsers released before 2023 */html[dir="rtl"] .tc-sidebar-lists .tc-tab-set .tc-tab-divider {
+	background-image: linear-gradient(to left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%);
 }.tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
-	
-background-image: linear-gradient(left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
-background-image: -o-linear-gradient(left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
-background-image: -moz-linear-gradient(left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
-background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
-background-image: -ms-linear-gradient(left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
-
+	background-image: linear-gradient(to right, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%);
 }.tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button.tc-tab-selected {
-	
-background-image: linear-gradient(left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
-background-image: -o-linear-gradient(left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
-background-image: -moz-linear-gradient(left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
-background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
-background-image: -ms-linear-gradient(left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
-
+	background-image: linear-gradient(to right, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%);
+}html[dir="rtl"] .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.01) 100%);
+}html[dir="rtl"] .tc-more-sidebar > .tc-tab-set > .tc-tab-buttons > button.tc-tab-selected {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 100%)
 }.tc-message-box img {
-	
--webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-		box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }.tc-plugin-info {
-	
--webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-		box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5)
 }
 .tc-sites-icon {
 	width: 1em;
@@ -3014,7 +3321,7 @@ a .doc-attr {
 	width: 1em;
 	height: 1em;
     vertical-align: text-bottom;
-}.doc-link-badge {
+}html button.doc-link-badge, html a.doc-link-badge {
     text-decoration: none;
     background-color: #7eba4c;
     color: #83657b;
@@ -3022,8 +3329,16 @@ a .doc-attr {
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.75em;
-}.doc-link-badge:hover {
+}html button.doc-link-badge:hover, html a.doc-link-badge:hover {
     text-decoration: underline;
+}.doc-github-link svg {
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: middle;
+}.doc-changenote-body {
+	margin-left: 2em;
+	font-style: italic;
+	font-size: 0.9em;
 }.doc-tiddler-fields {
 	background-color: #d5eee8;
 	border: 1px solid #e3fdf6;
@@ -3039,8 +3354,6 @@ a .doc-attr {
 }@media screen {
 	.doc-tiddler-fields {
 		
--webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
 		box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
 
 	}
@@ -3049,6 +3362,7 @@ a .doc-attr {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 0;
 }
 ol.doc-github-contributors li {
 	display: flex;
@@ -3100,23 +3414,23 @@ ol.doc-github-contributors li {
 
 <section class="tc-story-river tc-static-story-river">
 <a name="Code of Conduct">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="Code of Conduct" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Code of Conduct</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix">19th August 2022 at 8:01pm</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>This community exists because TiddlyWiki is more useful when people share and work together.</p><p>This community is a beautiful but fragile thing: a collection of diverse people from all over the planet, united in their interest in the project, and their commitment to helping one another achieve and learn more.</p><p>We try to make the community as broad and welcoming as possible by remembering some basic principles of culture and behaviour.</p><p>These principles guide technical and non-technical decisions, and help contributors and leaders support our project and community.</p><ul><li>We are optimistic and hopeful</li><li>We aim to foster a learning environment that is collaborative and safe for everyone</li><li>We recognise that the motivation for sharing and helping is usually for appreciation, and not financial gain, and so we take care to acknowledge and <strong>thank the people who enrich the community by sharing what they have created</strong></li><li>While we are united in our interest in TiddlyWiki, we differ in every other conceivable way. We choose to focus on what unites us, and <strong>avoid unnecessarily mixing contentious topics like religion and politics</strong></li><li>We treat each other with respect, and start with the assumption that <strong>others are acting in good faith</strong></li><li>We avoid discriminatory language</li><li>We try to use our strength as a community to help others</li><li>We avoid responding when angry or upset because we try to de-escalate conflict</li><li>We make sure we critique ideas, not people</li><li>When we disagree with others we do so graciously, and treat others with dignity and respoect</li><li>We do not tolerate intolerance towards others</li><li>We seek first to understand others, and then to be understood</li><li>We have fun</li></ul><p>Our discussions are in English. It is not the first language of many people in the community, nor do we all share the same cultural background and reference points. So we take care to use language that is clear and unambigous, and avoid cultural references or jokes that will not be widely understood.</p><p>It is not acceptable to make jokes or other comments that discriminate by race, gender, sexuality, or other protected characteristic.</p><p>As an inclusive community, we are committed to making sure that TiddlyWiki is an accessible tool that understands the needs of people with disabilities.</p></div>
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="Code of Conduct" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Code of Conduct</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix">19th August 2022 at 8:01pm</div></div><div class="tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>This community exists because TiddlyWiki is more useful when people share and work together.</p><p>This community is a beautiful but fragile thing: a collection of diverse people from all over the planet, united in their interest in the project, and their commitment to helping one another achieve and learn more.</p><p>We try to make the community as broad and welcoming as possible by remembering some basic principles of culture and behaviour.</p><p>These principles guide technical and non-technical decisions, and help contributors and leaders support our project and community.</p><ul><li>We are optimistic and hopeful</li><li>We aim to foster a learning environment that is collaborative and safe for everyone</li><li>We recognise that the motivation for sharing and helping is usually for appreciation, and not financial gain, and so we take care to acknowledge and <strong>thank the people who enrich the community by sharing what they have created</strong></li><li>While we are united in our interest in TiddlyWiki, we differ in every other conceivable way. We choose to focus on what unites us, and <strong>avoid unnecessarily mixing contentious topics like religion and politics</strong></li><li>We treat each other with respect, and start with the assumption that <strong>others are acting in good faith</strong></li><li>We avoid discriminatory language</li><li>We try to use our strength as a community to help others</li><li>We avoid responding when angry or upset because we try to de-escalate conflict</li><li>We make sure we critique ideas, not people</li><li>When we disagree with others we do so graciously, and treat others with dignity and respoect</li><li>We do not tolerate intolerance towards others</li><li>We seek first to understand others, and then to be understood</li><li>We have fun</li></ul><p>Our discussions are in English. It is not the first language of many people in the community, nor do we all share the same cultural background and reference points. So we take care to use language that is clear and unambigous, and avoid cultural references or jokes that will not be widely understood.</p><p>It is not acceptable to make jokes or other comments that discriminate by race, gender, sexuality, or other protected characteristic.</p><p>As an inclusive community, we are committed to making sure that TiddlyWiki is an accessible tool that understands the needs of people with disabilities.</p></div>
 </div>
 </a><a name="Fundraising">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="Fundraising" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Fundraising</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 10:17am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><h2 class="">Introduction</h2><p>TiddlyWiki's nature allows us to operate <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a> without any running costs. (See <a class="tc-tiddlylink tc-tiddlylink-missing" href="#Infrastructure">Infrastructure</a> for details of how we currently use the free GitHub's Pages service for the majority of our hosting requirements).</p><h2 class="">Community Infrastructure</h2><p>We do need a small amount of money on an ongoing basis to pay the costs of running our own discussion forum at <a class="tc-tiddlylink-external" href="https://talk.tiddlywiki.org/" rel="noopener noreferrer" target="_blank">https://talk.tiddlywiki.org/</a>. We are also interested in exploring ways to help fund contributors who face financial barriers to giving time to the project.</p><p>We use Open Collective to allow you to contribute towards these costs. You can contribute a one-off donation, or make an ongoing monthly commitment. Find out more:</p><p><a class="tc-tiddlylink-external" href="https://opencollective.com/tiddlywiki" rel="noopener noreferrer" target="_blank">https://opencollective.com/tiddlywiki</a></p><h2 class="">Community Projects</h2><p>We also use Open Collective to raise funds to support the development of major new features, plugins or community infrastructure. These projects generally involve a small team of individuals getting together and making a proposal to the rest of the community.</p><p>For example, the <a class="tc-tiddlylink-external" href="https://opencollective.com/tiddlywiki/projects/tiddlywiki-file-upload" rel="noopener noreferrer" target="_blank">File Upload Plugin Project</a> aims to radically simplify working with attached images.
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="Fundraising" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Fundraising</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 10:17am</div></div><div class="tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><h2 class="">Introduction</h2><p>TiddlyWiki's nature allows us to operate <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a> without any running costs. (See <a class="tc-tiddlylink tc-tiddlylink-missing" href="#Infrastructure">Infrastructure</a> for details of how we currently use the free GitHub's Pages service for the majority of our hosting requirements).</p><h2 class="">Community Infrastructure</h2><p>We do need a small amount of money on an ongoing basis to pay the costs of running our own discussion forum at <a class="tc-tiddlylink-external" href="https://talk.tiddlywiki.org/" rel="noopener noreferrer" target="_blank">https://talk.tiddlywiki.org/</a>. We are also interested in exploring ways to help fund contributors who face financial barriers to giving time to the project.</p><p>We use Open Collective to allow you to contribute towards these costs. You can contribute a one-off donation, or make an ongoing monthly commitment. Find out more:</p><p><a class="tc-tiddlylink-external" href="https://opencollective.com/tiddlywiki" rel="noopener noreferrer" target="_blank">https://opencollective.com/tiddlywiki</a></p><h2 class="">Community Projects</h2><p>We also use Open Collective to raise funds to support the development of major new features, plugins or community infrastructure. These projects generally involve a small team of individuals getting together and making a proposal to the rest of the community.</p><p>For example, the <a class="tc-tiddlylink-external" href="https://opencollective.com/tiddlywiki/projects/tiddlywiki-file-upload" rel="noopener noreferrer" target="_blank">File Upload Plugin Project</a> aims to radically simplify working with attached images.
 </p></div>
 </div>
 </a><a name="HelloThere">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="HelloThere" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">HelloThere</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 8:14am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>This is the official hub for the TiddlyWiki community.</p><p>Other official TiddlyWiki sites include:</p><ul><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> – user documentation</li><li><a class="tc-tiddlylink-external" href="https://talk.tiddlywiki.org" rel="noopener noreferrer" target="_blank">talk.tiddlywiki.org</a> – user discussion forum</li><li><a class="tc-tiddlylink-external" href="https://links.tiddlywiki.org" rel="noopener noreferrer" target="_blank">links.tiddlywiki.org</a> – collection of links collaboratively curated by the community</li><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com/dev" rel="noopener noreferrer" target="_blank">tiddlywiki.com/dev</a> – internal JavaScript documentation</li></ul></div>
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Table%20of%20Contents" data-tags="[[Table of Contents]]" data-tiddler-title="HelloThere" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">HelloThere</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 8:14am</div></div><div class="tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Table of Contents"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-exists">Table of Contents</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>This is the official hub for the TiddlyWiki community.</p><p>Other official TiddlyWiki sites include:</p><ul><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> – user documentation</li><li><a class="tc-tiddlylink-external" href="https://talk.tiddlywiki.org" rel="noopener noreferrer" target="_blank">talk.tiddlywiki.org</a> – user discussion forum</li><li><a class="tc-tiddlylink-external" href="https://links.tiddlywiki.org" rel="noopener noreferrer" target="_blank">links.tiddlywiki.org</a> – collection of links collaboratively curated by the community</li><li><a class="tc-tiddlylink-external" href="https://tiddlywiki.com/dev" rel="noopener noreferrer" target="_blank">tiddlywiki.com/dev</a> – internal JavaScript documentation</li></ul></div>
 </div>
 </a><a name="Motovun Jack.svg">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-picture tc-tagged-TiddlyWikiSitesMenu" data-tags="picture TiddlyWikiSitesMenu" data-tiddler-title="Motovun Jack.svg" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Motovun Jack.svg</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix"></div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="picture"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">picture</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="TiddlyWikiSitesMenu"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">TiddlyWikiSitesMenu</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axl%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20viewBox%3D%2234%20107%20510%20317%22%20width%3D%22510pt%22%20height%3D%22317pt%22%3E%3Cmetadata%20xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%22%3E%3Cdc%3Adate%3E2012-05-10%2007%3A32Z%3C%2Fdc%3Adate%3E%3C!--%20Produced%20by%20OmniGraffle%20Professional%205.3.6%20--%3E%3C%2Fmetadata%3E%3Cdefs%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22none%22%20stroke-opacity%3D%221%22%20stroke-dasharray%3D%22none%22%20fill%3D%22none%22%20fill-opacity%3D%221%22%3E%3Ctitle%3ECanvas%201%3C%2Ftitle%3E%3Cg%3E%3Ctitle%3ELayer%201%3C%2Ftitle%3E%3Cpath%20d%3D%22M%20204.10294%20372.67294%20L%20206.91333%20373.50204%20C%20210.44484%20371.92197%20217.54364%20374.36401%20221.30923%20375.55795%20C%20214.37523%20367.871%20203.92865%20356.58286%20196.40225%20349.4665%20C%20193.93185%20340.85104%20194.98593%20332.1817%20195.51744%20323.3866%20L%20195.62405%20322.659%20C%20192.65733%20329.6997%20188.89246%20336.5437%20186.86893%20343.95477%20C%20184.50095%20353.95294%20197.39323%20364.74045%20202.39233%20370.92294%20Z%20M%20419.00293%20414.95798%20C%20399.65295%20414.411%20391.14194%20414.45804%20381.28735%20398.25296%20L%20373.60684%20398.473%20C%20364.66696%20398.076%20368.39264%20398.25595%20362.42844%20397.95901%20C%20352.45654%20397.57098%20354.05396%20388.09604%20352.29965%20383.09003%20C%20349.49335%20366.09698%20356.01324%20349.01611%20355.80756%20332.01971%20C%20355.73474%20325.98639%20347.19724%20304.63062%20344.14716%20296.99548%20C%20334.58554%20298.79572%20324.97205%20299.13895%20315.27176%20299.62231%20C%20292.91254%20299.56754%20270.70496%20296.8295%20248.65794%20293.35248%20C%20244.36153%20311.10052%20231.59093%20335.94183%20242.14684%20353.9793%20C%20254.95975%20372.63696%20263.95123%20377.80597%20277.88824%20378.93094%20C%20291.8251%20380.055%20294.97214%20395.78998%20291.60031%20401.40997%20C%20288.61584%20405.294%20283.37045%20405.99902%20278.91385%20406.94%20L%20269.99945%20407.35898%20C%20262.98456%20407.12299%20256.71454%20405.229%20250.46393%20402.30798%20C%20240.02545%20396.48102%20229.24443%20384.36703%20221.23434%20375.67001%20C%20223.09915%20379.143%20224.21146%20385.92294%20222.52005%20389.07803%20C%20217.78415%20395.78699%20197.30133%20395.746%20187.92093%20391.577%20C%20177.26495%20386.84198%20151.51596%20353.59503%20147.53493%20328.69455%20C%20158.12593%20308.66583%20173.55493%20291.2196%20181.36093%20269.41132%20C%20164.34593%20258.55438%20155.23293%20240.88019%20156.41594%20220.8598%20L%20156.84294%20218.5423%20C%20140.10095%20221.67648%20148.78296%20220.51039%20130.772964%20221.87279%20C%2073.41696%20221.6973%2022.976959%20182.80795%2051.378967%20122.367004%20C%2053.225952%20118.787964%2054.982956%20115.534%2058.113968%20117.08801%20C%2060.626953%20118.33496%2060.265976%20123.33699%2059.001953%20128.88399%20C%2042.766968%20201.10277%20122.11395%20201.65552%20170.88995%20188.29181%20C%20175.73093%20186.96521%20185.35893%20178.03061%20192.02843%20175.0687%20C%20202.93033%20170.22757%20214.76323%20168.2634%20226.50644%20166.84811%20C%20255.71411%20163.51997%20290.81815%20178.90649%20308.65442%20179.4089%20C%20326.4909%20179.91129%20351.86395%20175.13808%20367.43942%20176.14308%20C%20378.74075%20176.66016%20389.83795%20178.70007%20400.74194%20181.6059%20C%20407.79996%20147.215%20408.29895%20121.867996%20425.03094%20116%20C%20434.85095%20117.550995%20442.4179%20130.93298%20448.01895%20138.08301%20L%20448.04193%20138.07898%20C%20459.4489%20137.62897%20470.30396%20140.52301%20481.09692%20143.73497%20C%20500.63696%20140.962006%20517.03394%20129.989%20534.28992%20121.45299%20C%20534.23596%20121.721985%20533.95398%20121.81297%20533.78595%20121.99397%20C%20516.80396%20135.72798%20514.4319%20158.952%20516.42993%20180.42822%20C%20517.17297%20191.57237%20514.02393%20203.67166%20510.13098%20215.08179%20C%20502.84595%20233.67169%20488.77692%20253.26677%20472.44794%20252.26176%20C%20466.27496%20252.0665%20462.68893%20248.57117%20458.10095%20244.83946%20C%20457.21094%20252.39809%20453.71295%20259.14267%20450.34094%20265.82758%20C%20442.55396%20280.64941%20422.20496%20287.18097%20403.36292%20303.00763%20C%20384.52216%20318.83453%20409.39194%20375.35904%20415.42194%20385.65802%20C%20421.45096%20395.95798%20438.28192%20399.72598%20431.75095%20409.02194%20C%20429.75296%20412.09198%20426.69794%20413.19%20423.43292%20414.38098%20Z%22%20fill%3D%22black%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A"></div>
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-picture tc-tagged-TiddlyWikiSitesMenu" data-tags="picture TiddlyWikiSitesMenu" data-tiddler-title="Motovun Jack.svg" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Motovun Jack.svg</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix"></div></div><div class="tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="picture"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">picture</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="TiddlyWikiSitesMenu"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">TiddlyWikiSitesMenu</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><img src="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%3F%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axl%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20viewBox%3D%2234%20107%20510%20317%22%20width%3D%22510pt%22%20height%3D%22317pt%22%3E%3Cmetadata%20xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%22%3E%3Cdc%3Adate%3E2012-05-10%2007%3A32Z%3C%2Fdc%3Adate%3E%3C!--%20Produced%20by%20OmniGraffle%20Professional%205.3.6%20--%3E%3C%2Fmetadata%3E%3Cdefs%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22none%22%20stroke-opacity%3D%221%22%20stroke-dasharray%3D%22none%22%20fill%3D%22none%22%20fill-opacity%3D%221%22%3E%3Ctitle%3ECanvas%201%3C%2Ftitle%3E%3Cg%3E%3Ctitle%3ELayer%201%3C%2Ftitle%3E%3Cpath%20d%3D%22M%20204.10294%20372.67294%20L%20206.91333%20373.50204%20C%20210.44484%20371.92197%20217.54364%20374.36401%20221.30923%20375.55795%20C%20214.37523%20367.871%20203.92865%20356.58286%20196.40225%20349.4665%20C%20193.93185%20340.85104%20194.98593%20332.1817%20195.51744%20323.3866%20L%20195.62405%20322.659%20C%20192.65733%20329.6997%20188.89246%20336.5437%20186.86893%20343.95477%20C%20184.50095%20353.95294%20197.39323%20364.74045%20202.39233%20370.92294%20Z%20M%20419.00293%20414.95798%20C%20399.65295%20414.411%20391.14194%20414.45804%20381.28735%20398.25296%20L%20373.60684%20398.473%20C%20364.66696%20398.076%20368.39264%20398.25595%20362.42844%20397.95901%20C%20352.45654%20397.57098%20354.05396%20388.09604%20352.29965%20383.09003%20C%20349.49335%20366.09698%20356.01324%20349.01611%20355.80756%20332.01971%20C%20355.73474%20325.98639%20347.19724%20304.63062%20344.14716%20296.99548%20C%20334.58554%20298.79572%20324.97205%20299.13895%20315.27176%20299.62231%20C%20292.91254%20299.56754%20270.70496%20296.8295%20248.65794%20293.35248%20C%20244.36153%20311.10052%20231.59093%20335.94183%20242.14684%20353.9793%20C%20254.95975%20372.63696%20263.95123%20377.80597%20277.88824%20378.93094%20C%20291.8251%20380.055%20294.97214%20395.78998%20291.60031%20401.40997%20C%20288.61584%20405.294%20283.37045%20405.99902%20278.91385%20406.94%20L%20269.99945%20407.35898%20C%20262.98456%20407.12299%20256.71454%20405.229%20250.46393%20402.30798%20C%20240.02545%20396.48102%20229.24443%20384.36703%20221.23434%20375.67001%20C%20223.09915%20379.143%20224.21146%20385.92294%20222.52005%20389.07803%20C%20217.78415%20395.78699%20197.30133%20395.746%20187.92093%20391.577%20C%20177.26495%20386.84198%20151.51596%20353.59503%20147.53493%20328.69455%20C%20158.12593%20308.66583%20173.55493%20291.2196%20181.36093%20269.41132%20C%20164.34593%20258.55438%20155.23293%20240.88019%20156.41594%20220.8598%20L%20156.84294%20218.5423%20C%20140.10095%20221.67648%20148.78296%20220.51039%20130.772964%20221.87279%20C%2073.41696%20221.6973%2022.976959%20182.80795%2051.378967%20122.367004%20C%2053.225952%20118.787964%2054.982956%20115.534%2058.113968%20117.08801%20C%2060.626953%20118.33496%2060.265976%20123.33699%2059.001953%20128.88399%20C%2042.766968%20201.10277%20122.11395%20201.65552%20170.88995%20188.29181%20C%20175.73093%20186.96521%20185.35893%20178.03061%20192.02843%20175.0687%20C%20202.93033%20170.22757%20214.76323%20168.2634%20226.50644%20166.84811%20C%20255.71411%20163.51997%20290.81815%20178.90649%20308.65442%20179.4089%20C%20326.4909%20179.91129%20351.86395%20175.13808%20367.43942%20176.14308%20C%20378.74075%20176.66016%20389.83795%20178.70007%20400.74194%20181.6059%20C%20407.79996%20147.215%20408.29895%20121.867996%20425.03094%20116%20C%20434.85095%20117.550995%20442.4179%20130.93298%20448.01895%20138.08301%20L%20448.04193%20138.07898%20C%20459.4489%20137.62897%20470.30396%20140.52301%20481.09692%20143.73497%20C%20500.63696%20140.962006%20517.03394%20129.989%20534.28992%20121.45299%20C%20534.23596%20121.721985%20533.95398%20121.81297%20533.78595%20121.99397%20C%20516.80396%20135.72798%20514.4319%20158.952%20516.42993%20180.42822%20C%20517.17297%20191.57237%20514.02393%20203.67166%20510.13098%20215.08179%20C%20502.84595%20233.67169%20488.77692%20253.26677%20472.44794%20252.26176%20C%20466.27496%20252.0665%20462.68893%20248.57117%20458.10095%20244.83946%20C%20457.21094%20252.39809%20453.71295%20259.14267%20450.34094%20265.82758%20C%20442.55396%20280.64941%20422.20496%20287.18097%20403.36292%20303.00763%20C%20384.52216%20318.83453%20409.39194%20375.35904%20415.42194%20385.65802%20C%20421.45096%20395.95798%20438.28192%20399.72598%20431.75095%20409.02194%20C%20429.75296%20412.09198%20426.69794%20413.19%20423.43292%20414.38098%20Z%22%20fill%3D%22black%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E%0A"></div>
 </div>
 </a><a name="Table of Contents">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-%24%3A%2Ftags%2FSideBar" data-tags="$:/tags/SideBar" data-tiddler-title="Table of Contents" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Table of Contents</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 8:15am</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="$:/tags/SideBar"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">$:/tags/SideBar</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#HelloThere"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">HelloThere</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Fundraising"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Fundraising</span></a><span class=" tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Code%20of%20Conduct"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Code of Conduct</span></a><span class=" tc-reveal" hidden="true"></span></li></ol></p></div></div>
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-%24%3A%2Ftags%2FSideBar" data-tags="$:/tags/SideBar" data-tiddler-title="Table of Contents" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">Table of Contents</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix">19th April 2022 at 8:15am</div></div><div class="tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="$:/tags/SideBar"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="fill:#83657b;color:#83657b;"><span class="tc-tag-missing">$:/tags/SideBar</span></span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><div class="tc-table-of-contents"><p><ol class="tc-toc toc-selective-expandable"><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#HelloThere"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">HelloThere</span></a><span class="tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Fundraising"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Fundraising</span></a><span class="tc-reveal" hidden="true"></span></li><li class="toc-item"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="#Code%20of%20Conduct"><button class="tc-btn-invisible"><svg class="tc-image-blank tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"></svg></button><span class="tc-toc-caption tc-tiny-gap-left">Code of Conduct</span></a><span class="tc-reveal" hidden="true"></span></li></ol></p></div></div>
 </div>
 </a><a name="TiddlyWiki">
-<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists " data-tags="" data-tiddler-title="TiddlyWiki" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class=" tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">TiddlyWiki</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle tc-clearfix">18th March 2022 at 5:02pm</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>TiddlyWiki is a rich, interactive tool for manipulating complex data with structure that doesn't easily fit into conventional tools like spreadsheets or wordprocessors.</p><p>See <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> for more details.</p></div>
+<div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists " data-tags="" data-tiddler-title="TiddlyWiki" role="article"><div class="tc-tiddler-title tc-clearfix"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="more" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="More actions"></button><span class="tc-reveal" hidden="true"></span><button aria-label="Edit this tiddler" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Edit this tiddler"></button><button aria-label="close" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Close this tiddler"></button></span><span><h2 class="tc-title">TiddlyWiki</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class="tc-reveal"><div class="tc-subtitle tc-clearfix">18th March 2022 at 5:02pm</div></div><div class="tc-reveal"><div class="tc-tags-wrapper"></div></div><div class="tc-tiddler-body tc-clearfix tc-reveal"><p>TiddlyWiki is a rich, interactive tool for manipulating complex data with structure that doesn't easily fit into conventional tools like spreadsheets or wordprocessors.</p><p>See <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">tiddlywiki.com</a> for more details.</p></div>
 </div>
 </a>
 </section>
